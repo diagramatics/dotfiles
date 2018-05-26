@@ -29,10 +29,6 @@ done
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
-# Hub
-eval "$(hub alias -s)"
-
-
 # Add tab completion for many Bash commands
 if which brew &> /dev/null && [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
 	source "$(brew --prefix)/share/bash-completion/bash_completion";
@@ -47,6 +43,9 @@ fi
 # Thefuck
 eval "$(thefuck --alias)"
 
+# Hub
+eval "$(hub alias -s)"
+
 alias g="git"
 alias ls="ls -lah"
 alias cd..="cd .."
@@ -56,7 +55,3 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../../"
 alias ~="cd ~" # `cd` is probably faster to type though
-
-
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
