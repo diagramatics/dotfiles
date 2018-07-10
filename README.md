@@ -34,6 +34,8 @@ To install these dotfiles without Git:
 cd; curl -#L https://github.com/mathiasbynens/dotfiles/tarball/master | tar -xzv --strip-components 1 --exclude={README.md,bootstrap.sh,.osx,LICENSE-MIT.txt}
 ```
 
+To update later on, just run that command again.
+
 ## Dependency Installation
 
 Install dependencies if you're missing them:
@@ -42,4 +44,10 @@ Install dependencies if you're missing them:
 ./deps.sh
 ```
 
-To update later on, just run that command again.
+### Sensible macOS defaults
+
+When setting up a new Mac, you may want to set some sensible macOS defaults:
+
+```bash
+./macos.sh
+```
