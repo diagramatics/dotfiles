@@ -9,4 +9,5 @@ npm install -g diff-so-fancy
 
 brew install hub
 brew install thefuck
+brew install git-lfs
 brew install vim --override-system-vi

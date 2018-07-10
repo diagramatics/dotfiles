@@ -12,10 +12,5 @@ function openurl() {
 
 function npm-do { (PATH=$(npm bin):$PATH; eval $@;) }
 
-size=$(
-	stat -f"%z" "${tmpFile}" 2> /dev/null; # macOS `stat`
-	stat -c"%s" "${tmpFile}" 2> /dev/null;  # GNU `stat`
-[ -f "${tmpFile}" ] && rm "${tmpFile}";
-
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
