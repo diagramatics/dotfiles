@@ -2,6 +2,9 @@
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
+# Add fonts
+cp ./init/fonts/* ~/Library/Fonts/
+
 ###############################################################################
 # Terminal                                                                    #
 ###############################################################################
