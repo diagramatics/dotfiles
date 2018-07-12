@@ -7,6 +7,7 @@ nvm alias default node
 npm install -g avn avn-nvm avn-n
 npm install -g diff-so-fancy
 
+brew install fzf
 brew install hub
 brew install thefuck
 brew install git-lfs
