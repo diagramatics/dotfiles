@@ -1,4 +1,5 @@
 [alias]
+  a = add -A
   b = branch
   co = checkout
   r = rebase
