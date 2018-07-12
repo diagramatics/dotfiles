@@ -36,8 +36,8 @@ elif [ -f /etc/bash_completion ]; then
 	source /etc/bash_completion;
 fi;
 
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
+if [ -f ~/init/git-completion.sh ]; then
+  . ~/init/git-completion.sh
 fi
 
 # Thefuck
