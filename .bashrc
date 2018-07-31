@@ -40,6 +40,10 @@ if [ -f ~/init/git-completion.sh ]; then
   . ~/init/git-completion.sh
 fi
 
+if [ -f ~/init/yarn-completion.sh ]; then
+  . ~/init/yarn-completion.sh
+fi
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
