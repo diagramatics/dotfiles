@@ -22,6 +22,8 @@ export COMPLETION_WAITING_DOTS="true"
 # check for large repositories much, much faster.
 export DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+export DISABLE_LS_COLORS="true"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
