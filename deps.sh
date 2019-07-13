@@ -6,6 +6,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 brew install zsh
 sudo sh -c "echo $(command -v zsh) >> /etc/shells"
 sudo chsh -s "$(command -v zsh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 brew install fzf
 brew install hub
