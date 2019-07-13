@@ -13,7 +13,6 @@ function doIt() {
 		--exclude "deps.sh" \
 		--exclude "macos.sh" \
 		--exclude "zsh.sh" \
-		--exclude ".gitconfig" \
 		--exclude ".gitignore" \
 		-avh --no-perms . ~;
 	source "${HOME}/.zprofile";
