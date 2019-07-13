@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 function repo() {
-	cd ~/repos/"$1" || return
+	cd "${HOME}/repos/$1" || exit
 }
 
 function openurl() {
