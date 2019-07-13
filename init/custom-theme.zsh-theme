@@ -2,8 +2,8 @@
 
 ### NVM
 
-ZSH_THEME_NVM_PROMPT_PREFIX="%B⬡%b "
-ZSH_THEME_NVM_PROMPT_SUFFIX=""
+export ZSH_THEME_NVM_PROMPT_PREFIX="%B⬡%b "
+export ZSH_THEME_NVM_PROMPT_SUFFIX=""
 
 ### Git [±master ▾●]
 
@@ -114,8 +114,10 @@ bureau_precmd () {
 }
 
 setopt prompt_subst
-PROMPT="$_LIBERTY "
-RPROMPT="$(nvm_prompt_info) $(bureau_git_prompt)"
+# shellcheck disable=2016
+export PROMPT='$_LIBERTY '
+# shellcheck disable=2016
+export RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
