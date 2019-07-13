@@ -16,6 +16,7 @@
   switch = !"git branch | fzf | xargs -I{} git checkout {}"
   sw = switch
   cp = cherry-pick
+  strong-prune = !"git remote prune origin && git branch -r | awk '{print $1}' | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk '{print $1}' | xargs git branch -D"
 
 [color]
   # Use colors in Git commands that are capable of colored output when

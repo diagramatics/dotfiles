@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#! /usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE}")";
+cd "$(dirname "${BASH_SOURCE}")" || exit 1;
 
 git pull origin master;
 
@@ -10,15 +10,19 @@ function doIt() {
 		--exclude ".osx" \
 		--exclude "bootstrap.sh" \
 		--exclude "README.md" \
-		--exclude "LICENSE-MIT.txt" \
+		--exclude "deps.sh" \
+		--exclude "macos.sh" \
+		--exclude "zsh.sh" \
+		--exclude ".gitconfig" \
+		--exclude ".gitignore" \
 		-avh --no-perms . ~;
-	source ~/.bash_profile;
+	source "${HOME}/.zprofile";
 }
 
-if [ "$1" == "--force" -o "$1" == "-f" ]; then
+if [ "$1" == "--force" ] || [ "$1" == "-f" ]; then
 	doIt;
 else
-	read -p "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
+	read -rp "This may overwrite existing files in your home directory. Are you sure? (y/n) " -n 1;
 	echo "";
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		doIt;

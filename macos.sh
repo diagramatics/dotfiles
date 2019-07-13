@@ -1,9 +1,14 @@
+#!/usr/bin/env bash
+
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Add fonts
 cp ./init/fonts/* ~/Library/Fonts/
+
+# Use fingerprint for sudo
+sudo sh -c "$(printf '\nauth sufficient pam_tid.so') >> /etc/pam.d/sudo"
 
 ###############################################################################
 # Terminal                                                                    #
@@ -12,7 +17,7 @@ cp ./init/fonts/* ~/Library/Fonts/
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Use a modified version of the Solarized Dark theme by default in Terminal.app
+# Use provided color scheme in Terminal.app
 osascript <<EOD
 tell application "Terminal"
 	local allOpenedWindows
