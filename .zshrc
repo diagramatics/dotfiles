@@ -37,6 +37,9 @@ source "$ZSH/oh-my-zsh.sh"
 autoload -U +X bashcompinit && bashcompinit
 autoload -U +X compinit && compinit
 
+# Disable zsh autocorrect
+unsetopt correct_all
+
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
