@@ -8,6 +8,7 @@ sudo sh -c "echo $(command -v zsh) >> /etc/shells"
 sudo chsh -s "$(command -v zsh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+brew install git
 brew install fzf
 brew install hub
 brew install thefuck
