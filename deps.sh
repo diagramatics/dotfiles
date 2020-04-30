@@ -16,7 +16,7 @@ brew install git-lfs
 brew install vim --override-system-vi
 brew install nix
 
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | sh
 
 nvm install node --reinstall-packages-from=node
 nvm alias default node
