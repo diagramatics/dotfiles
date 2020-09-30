@@ -11,6 +11,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 brew install git
 brew install fzf
 brew install hub
+brew install github
 brew install thefuck
 brew install git-lfs
 brew install vim --override-system-vi

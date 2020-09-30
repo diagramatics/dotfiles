@@ -12,3 +12,6 @@ alias ~="cd ~" # `cd` is probably faster to type though
 
 # Enable hub aliasing
 eval "$(hub alias -s)"
+
+# Enable github aliasing
+eval "$(gh alias --shell zsh)"
