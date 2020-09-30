@@ -32,3 +32,6 @@ if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/
 # Cargo/rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# Enable github autocompletion
+eval "$(gh completion --shell zsh)"
+
