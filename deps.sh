@@ -16,6 +16,7 @@ brew install thefuck
 brew install git-lfs
 brew install vim --override-system-vi
 brew install nix
+brew cask install iterm2
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | sh
 
