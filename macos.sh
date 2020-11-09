@@ -53,4 +53,8 @@ EOD
 
 killall Terminal &> /dev/null
 
+# Load iterm profiles from dotfiles
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.dotfiles-files/iterm2/"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
 echo "Done. Note that some of these changes require a logout/restart to take effect."
