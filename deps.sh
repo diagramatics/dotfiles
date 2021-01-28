@@ -15,8 +15,9 @@ brew install github
 brew install thefuck
 brew install git-lfs
 brew install vim --override-system-vi
-brew install nix
+brew install nix --darwin-use-unencrypted-nix-store-volume
 brew cask install iterm2
+brew install pyenv
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | sh
 

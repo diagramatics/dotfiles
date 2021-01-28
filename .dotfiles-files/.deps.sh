@@ -35,3 +35,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Enable github autocompletion
 eval "$(gh completion --shell zsh)"
 
+# pyenv
+echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.zshrc
+
+
