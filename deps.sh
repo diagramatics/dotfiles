@@ -15,7 +15,7 @@ brew install github
 brew install thefuck
 brew install git-lfs
 brew install vim --override-system-vi
-brew install nix --darwin-use-unencrypted-nix-store-volume
+sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
 brew cask install iterm2
 brew install pyenv
 
