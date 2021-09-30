@@ -4,13 +4,13 @@
   co = checkout
   r = rebase
   s = status
+  ss = status -uno
   ca = commit --amend
   cqa = commit --amend --no-edit
   ra = commit -a --amend --no-edit && rebase --continue
   tree1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   tree2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   tree = !"git tree1"
-  dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy  | less --tabs=4 -RFX; }; f"
   rebase-master = !"git fetch origin master && git rebase origin/master"
   checkout-master = !"git fetch origin master && git checkout origin/master"
   switch-branch = !"git branch | fzf | xargs -I{} git checkout {}"
@@ -55,10 +55,16 @@
 [core]
   editor = vim
   ignorecase = false
+  pager = delta
 
-[pager]
-  diff = diff-so-fancy | less --tabs=4 -RFX
-  show = diff-so-fancy | less --tabs=4 -RFX
+[delta]
+  plus-style = "syntax #012800"
+  minus-style = "syntax #340001"
+  syntax-theme = Sublime Snazzy
+  navigate = true
+
+[interactive]
+  diffFilter = delta --color-only
 
 [filter "lfs"]
   clean = git-lfs clean %f
