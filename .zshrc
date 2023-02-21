@@ -29,7 +29,7 @@ export DISABLE_LS_COLORS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export plugins=(git node osx yarn zsh-autosuggestions zsh-syntax-highlighting github)
+export plugins=(git node macos yarn zsh-autosuggestions zsh-syntax-highlighting github)
 
 source "$ZSH/oh-my-zsh.sh"
 
@@ -56,16 +56,13 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
-  export PATH="$PATH:/usr/local/opt/fzf/bin"
-fi
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Auto-completion
 # ---------------
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
-# Key bindings
-# ------------
-source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-
+# fnm auto detect
+# ---------------
+eval "$(fnm env --use-on-cd)"
 

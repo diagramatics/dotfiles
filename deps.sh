@@ -10,19 +10,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 
 brew install git
 brew install fzf
+$(brew --prefix)/opt/fzf/install --all
 brew install hub
-brew install github
+brew install gh
 brew install thefuck
 brew install git-lfs
 brew install vim --override-system-vi
 sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
-brew cask install iterm2
 brew install pyenv
 brew install git-delta
+brew install --cask warp
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | sh
+curl -fsSL https://fnm.vercel.app/install | bash
 
-nvm install node --reinstall-packages-from=node
+fnm install --lts
 nvm alias default node
 npm install -g avn avn-nvm avn-n
 npm install -g yarn

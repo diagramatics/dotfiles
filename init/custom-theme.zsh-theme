@@ -117,7 +117,8 @@ setopt prompt_subst
 # shellcheck disable=2016
 export PROMPT='$_LIBERTY '
 # shellcheck disable=2016
-export RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
+# TODO: disable because warp doesn't support it
+# export RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
