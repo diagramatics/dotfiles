@@ -26,7 +26,9 @@ curl -fsSL https://fnm.vercel.app/install | bash
 fnm install --lts
 nvm alias default node
 npm install -g avn avn-nvm avn-n
-npm install -g yarn
+
+corepack enable
+corepack prepare yarn@stable --activate
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y

@@ -29,7 +29,7 @@ export DISABLE_LS_COLORS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-export plugins=(git node macos yarn zsh-autosuggestions zsh-syntax-highlighting github)
+export plugins=(git gitfast node macos yarn zsh-autosuggestions zsh-syntax-highlighting github)
 
 source "$ZSH/oh-my-zsh.sh"
 
