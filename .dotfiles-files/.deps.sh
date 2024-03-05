@@ -4,8 +4,8 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Nix
-export PATH="/nix/var/nix/profiles/default/bin:$PATH"
-if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi # added by Nix installer
+# export PATH="/nix/var/nix/profiles/default/bin:$PATH"
+# if [ -e "$HOME/.nix-profile/etc/profile.d/nix.sh" ]; then . "$HOME/.nix-profile/etc/profile.d/nix.sh"; fi # added by Nix installer
 
 # Cargo/rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -21,7 +21,7 @@ eval "$(gh completion --shell zsh)"
 # enable shims by adding the following
 # to ~/.profile and ~/.zprofile:
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
 

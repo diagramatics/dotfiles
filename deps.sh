@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Swap to zsh
 brew install zsh
@@ -9,23 +8,17 @@ sudo chsh -s "$(command -v zsh)"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 brew install git
-brew install fzf
-$(brew --prefix)/opt/fzf/install --all
+# brew install fzf
+# $(brew --prefix)/opt/fzf/install --all
 brew install hub
 brew install gh
-brew install thefuck
-brew install git-lfs
-brew install vim --override-system-vi
-sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
+brew install vim
 brew install pyenv
 brew install git-delta
 brew install --cask warp
 
 curl -fsSL https://fnm.vercel.app/install | bash
-
 fnm install --lts
-nvm alias default node
-npm install -g avn avn-nvm avn-n
 
 corepack enable
 corepack prepare yarn@stable --activate

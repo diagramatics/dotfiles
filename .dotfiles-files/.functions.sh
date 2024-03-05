@@ -14,5 +14,5 @@ function openurl() {
 
 function npm-do { (PATH=$(npm bin):$PATH; eval "$@";) }
 
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+# alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+# alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"

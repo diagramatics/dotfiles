@@ -11,5 +11,5 @@ alias ......="cd ../../../../../"
 alias ~="cd ~" # `cd` is probably faster to type though
 
 # Enable hub aliasing
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
