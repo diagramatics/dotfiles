@@ -35,7 +35,7 @@ export DISABLE_LS_COLORS="true"
 
 # Enable bash completion
 autoload -U +X bashcompinit && bashcompinit
-autoload -U +X compinit && compinit
+autoload -Uz +X compinit && compinit
 
 # Disable zsh autocorrect
 unsetopt correct_all
@@ -62,4 +62,11 @@ fi
 # fnm
 export PATH="/Users/diagramatics/Library/Application Support/fnm:$PATH"
 eval "`fnm env`"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+# pipenv
+export PATH="/Users/diagramatics/.local/bin:$PATH"
 
